@@ -1,0 +1,106 @@
+//Bootstrap
+$primary: #069754;
+$secondary: black;
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Variables
+/*Mobile*/
+:root{
+  --s-logo: 15rem;
+  --s-images: 5rem;
+
+  --fs-subtitle: 2.5rem;
+  --fs-about: 1.5rem;
+  --fs-contact-title: 2.5rem;
+  --fs-contact-button: 1.5rem;
+  --fs-contact-info: 1.5rem;
+}
+
+/*Tablet*/
+@media (min-width: 600px){
+  :root{
+    --s-logo: 30rem;
+    --s-images: 10rem;
+
+    --fs-subtitle: 4rem;
+    --fs-about: 2rem;
+    --fs-contact-title: 4em;
+    --fs-contact-button: 3rem;
+    --fs-contact-info: 2rem;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 768px){
+  :root{
+    --s-logo: 40rem;
+    --s-images: 15rem;
+
+    --fs-subtitle: 4.5rem;
+    --fs-about: 2.5rem;
+    --fs-contact-title: 4.5rem;
+    --fs-contact-button: 4rem;
+    --fs-contact-info: 2.5rem;
+  }
+}
+
+//Font Size
+$text-sizes: (
+  subtitle: var(--fs-subtitle),
+  about: var(--fs-about),
+  contact-title: var(--fs-contact-title),
+  contact-button: var(--fs-contact-button),
+  contact-info: var(--fs-contact-info),
+  
+);
+
+@each $sizename, $size in $text-sizes {
+  .text-#{$sizename} {
+    font-size: $size;
+  }
+}
+
+//Images
+.app-logo{
+  width: var(--s-logo);
+}
+
+.example{
+  width: 100%;
+  height: fit-content;
+}
+
+//Pane
+.v-pane{
+  height: 100%;
+}
+
+.h-pane{
+  width: 100%;
+}
+
+.pane{
+  @extend .v-pane;
+  @extend .h-pane;
+}
+
+@each $colorname, $color in $theme-colors {
+  .pane-#{$colorname} {
+    @extend .pane;
+    background-color: $color;
+  }
+}
+
+//Page
+.page{
+  width: 100vw;
+  height: 100vh;
+}
+
+@each $colorname, $color in $theme-colors {
+  .page-#{$colorname} {
+    @extend .page;
+    background-color: $color;
+  }
+}
