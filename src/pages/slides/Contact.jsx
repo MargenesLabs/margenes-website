@@ -93,8 +93,8 @@ function Contact({
                 <p>{TITLE[checkLenguage]}</p>
             </div>
             <div className='row justify-content-around my-2'>
-                <Button variant="secondary" size='lg' className='col-5 rounded-pill text-contact-button' href="mailto:acosta57esteban@gmail.com">{BUTTON_1[checkLenguage]}</Button>
-                <Button variant="secondary" size='lg' className='col-5 rounded-pill text-contact-button' href="mailto:acosta57esteban@gmail.com">{BUTTON_2[checkLenguage]}</Button>
+                <Button variant="secondary" size='lg' className='col-5 rounded-pill text-contact-button' href="mailto:hello@margeneslabs.io">{BUTTON_1[checkLenguage]}</Button>
+                <Button variant="secondary" size='lg' className='col-5 rounded-pill text-contact-button' href="mailto:hello@margeneslabs.io">{BUTTON_2[checkLenguage]}</Button>
             </div>
             <div className='row text-center text-contact-info my-2'>
                 <div className='col'>
