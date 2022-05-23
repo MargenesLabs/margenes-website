@@ -1,0 +1,12 @@
+//Orientation
+@media only screen and (orientation:portrait) {
+    .footer-logo{
+        max-width: 20%;
+    }
+}
+  
+@media only screen and (orientation:landscape) {
+    .footer-logo{
+        max-width: 10%;
+    }
+}

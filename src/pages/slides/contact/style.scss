@@ -1,0 +1,49 @@
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+//Orientation
+@media only screen and (orientation:portrait) {
+    $size: 3vw;
+
+    .contact-text-info{
+        font-size: $size;
+        line-height: 1.6;
+    }
+
+    .contact-text-button{
+        font-size: $size;
+        width: $size*10;
+    }
+
+    .contact-middle-button{
+        width: $size;
+    }
+
+    .contact-logo{
+        max-width: 75%;
+    }
+}
+  
+@media only screen and (orientation:landscape) {
+    $size: 1.5vw;
+
+    .contact-text-info{
+        font-size: $size;
+        line-height: 1.6;
+    }
+
+    .contact-text-button{
+        font-size: $size;
+    }
+
+    .contact-logo{
+        max-width: 30%;
+    }
+}

@@ -1,0 +1,22 @@
+//Orientation
+@media only screen and (orientation:portrait) {
+    .examples-text{
+        font-size: 10vw;
+    }
+
+    .examples-image{
+        max-width: 90%;
+        border-radius: 15px;
+    }
+}
+  
+@media only screen and (orientation:landscape) {
+    .examples-text{
+        font-size: 5vw;
+    }
+
+    .examples-image{
+        max-width: 90%;
+        border-radius: 15px;
+    }
+}

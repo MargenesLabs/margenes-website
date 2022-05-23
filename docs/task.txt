@@ -1,0 +1,12 @@
+Libraries{
+    bootstrap,
+    react-bootstrap,
+    sass,
+    react-scroll-motion,
+    gh-pages,
+    react-spring,
+}
+
+scripts{
+    "deploy": "gh-pages -b master -d build" --> "gh-pages -d build"
+}

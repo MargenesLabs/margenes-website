@@ -1,10 +1,10 @@
-import { ScrollContainer, Sticky, batch, Fade, FadeIn, Move} from 'react-scroll-motion'
+import { ScrollContainer, Sticky, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut} from 'react-scroll-motion'
 
-import Title from './slides/Title';
-import Subtitle from './slides/Subtitle'
-import About from './slides/About'
-import Examples from './slides/Examples'
-import Contact from './slides/Contact'
+import Title from './slides/title/Title';
+import Subtitle from './slides/subtitle/Subtitle'
+import About from './slides/about/About'
+import Examples from './slides/examples/Examples'
+import Contact from './slides/contact/Contact'
 
 import Page from '../components/Page'
 
@@ -16,39 +16,37 @@ const FadeAnimation = batch(Fade(), Sticky());
  */
 function App() {
   return (
-    <>
+    <div>
         <ScrollContainer>
-
-            <Page page={0} theme='secondary' animation={batch(Sticky())} footerTheme='white'>
+            <Page page={0} theme='light' animation={batch(Sticky(), Move(0, 2000, 0, -2000))} footer={false}>
                 <Title/>
             </Page>
 
-            <Page page={1} theme='secondary' animation={batch(FadeIn(), Sticky())} footerTheme='white'/>{/*Intermedio*/}
+            <Page page={1} theme='light' animation={batch(FadeIn(), Sticky())} footer={false}/>{/*Intermedio*/}
 
-            <Page page={2} theme='secondary' animation={FadeAnimation} footerTheme='white' footerAnimation={Fade()}>
+            <Page page={2} theme='light' animation={FadeAnimation} footerAnimation={FadeIn()}>
                 <Subtitle/>
             </Page>
 
-            <Page page={3} animation={batch(FadeIn(), Sticky())} footerTheme='secondary' footerAnimation={FadeIn()}/>{/*Intermedio*/}
+            <Page page={3} theme='light' animation={batch(FadeIn(), Sticky())} footerAnimation={Fade()}/>{/*Intermedio*/}
 
-            <Page page={4} animation={FadeAnimation} footerTheme='secondary' >
+            <Page page={4} theme='secondary' animation={batch(FadeIn(), Sticky())} footerAnimation={FadeIn()}>
                 <About/>
             </Page>
 
-            <Page page={5} animation={batch(FadeIn(), Sticky())} footerTheme='secondary' />{/*Intermedio*/}
+            <Page page={5} theme='secondary' animation={batch(FadeIn(), Sticky())} footerAnimation={FadeIn()}/>{/*Intermedio*/}
 
-            <Page theme='secondary' page={6} animation={batch(Sticky(), Move(2000, 0, -2000, 0))} footerTheme='white' footerAnimation={batch(Move(2000, 0, -2000, 0))}>
+            <Page page={6} theme='secondary' animation={batch(Sticky(), MoveIn(0, 2000, 0, -2000))} footerAnimation={Fade()}>
                 <Examples/>
             </Page>
 
-            <Page page={7} animation={batch(FadeIn(), Sticky())} footerTheme='secondary' />{/*Intermedio*/}
+            <Page page={7} theme='light' animation={batch(Sticky(), Move(0, 1000, 0, -1000))} footerAnimation={FadeIn()}/>{/*Intermedio*/}
 
-            <Page page={8} animation={FadeAnimation} footerTheme='secondary' >
+            <Page page={8} theme='light' animation={FadeAnimation} footerAnimation={FadeIn()}>
                 <Contact lenguage="ES"/>
             </Page>
-
         </ScrollContainer>
-    </>
+    </div>
   );
 }
 

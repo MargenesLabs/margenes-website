@@ -1,0 +1,12 @@
+//Orientation
+@media only screen and (orientation:portrait) {
+    .subtitle-text{
+        font-size: 10vw;
+    }
+}
+  
+@media only screen and (orientation:landscape) {
+    .subtitle-text{
+        font-size: 6vw;
+    }
+}
