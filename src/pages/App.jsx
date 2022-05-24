@@ -36,9 +36,9 @@ function App() {
 
             <Page page={5} theme='secondary' animation={batch(FadeIn(), Sticky())} footerAnimation={FadeIn()}/>{/*Intermedio*/}
 
-            <Page page={6} theme='secondary' animation={batch(Sticky(), MoveIn(0, 2000, 0, -2000))} footerAnimation={Fade()}>
+            {/* <Page page={6} theme='secondary' animation={batch(Sticky(), MoveIn(0, 2000, 0, -2000))} footerAnimation={Fade()}>
                 <Examples/>
-            </Page>
+            </Page> */}
 
             <Page page={7} theme='light' animation={batch(Sticky(), Move(0, 1000, 0, -1000))} footerAnimation={FadeIn()}/>{/*Intermedio*/}
 
