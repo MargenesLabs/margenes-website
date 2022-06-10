@@ -5,6 +5,7 @@ import Subtitle from './slides/subtitle/Subtitle'
 import About from './slides/about/About'
 import Examples from './slides/examples/Examples'
 import Contact from './slides/contact/Contact'
+import Logo3D from './slides/logo3D/Logo3D'
 
 import Page from '../components/Page'
 
@@ -19,7 +20,7 @@ function App() {
     <div>
         <ScrollContainer>
             <Page page={0} theme='light' animation={batch(Sticky(), Move(0, 2000, 0, -2000))} footer={false}>
-                <Title/>
+                <Logo3D/>
             </Page>
 
             <Page page={1} theme='light' animation={batch(FadeIn(), Sticky())} footer={false}/>{/*Intermedio*/}
