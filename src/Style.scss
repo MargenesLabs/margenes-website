@@ -21,9 +21,14 @@ $light: #fffdfa;
 }
 
 body{
-  background-color: $light;
-  font-family: "public sans";
-  line-height: 1;
+    background-color: $light;
+    font-family: "public sans";
+    line-height: 1;
+}
+
+::selection {
+  color: $secondary;
+  background: $primary;
 }
 
 //Pane
@@ -55,17 +60,57 @@ body{
 
 @each $colorname, $color in $theme-colors {
   .page-#{$colorname} {
-    @extend .page;
-    background-color: $color;
-    @if $color == $light{
+      @extend .page;
+      background-color: $color;
+      @if $color == $light{
       color: $secondary;
-    } @else if $color == $secondary{
+      } @else if $color == $secondary{
       color: $light;
-    }
+      }
+  }
+}
+
+.wpage{
+  width: 100vw;
+  min-height: 100vh;
+}
+
+@each $colorname, $color in $theme-colors {
+  .wpage-#{$colorname} {
+      @extend .wpage;
+      background-color: $color;
+      @if $color == $light{
+      color: $secondary;
+      } @else if $color == $secondary{
+      color: $light;
+      }
   }
 }
 
 //Fonts
 .font-codesaver{
   font-family: 'code saver';
+}
+
+//Orientation
+@media only screen and (orientation:portrait) {
+  //Hide
+  .hide-on-portrait {
+    display: none;
+  }
+
+  .hide-on-portrait *{
+    display: none;
+  }
+}
+
+@media only screen and (orientation:landscape) {
+  //Hide
+  .hide-on-landscape {
+    display: none;
+  }
+
+  .hide-on-landscape *{
+    display: none;
+  }
 }

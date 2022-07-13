@@ -1,0 +1,18 @@
+//Link
+.services-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+//Orientation
+@media only screen and (orientation:portrait) {
+    .services-text{
+        font-size: 3.5vw;
+    }
+}
+  
+@media only screen and (orientation:landscape) {
+    .services-text{
+        font-size: 1vw;
+    }
+}
